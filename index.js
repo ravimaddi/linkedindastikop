@@ -5,7 +5,7 @@ app.use(express.json())
 app.use(cors())
 const port = process.env.PORT || 3015;
 const path = require('path')
-app.use('/api',router)
+
 app.use(express.static(path.join(__dirname,"client/build"))) 
 app.get("*",(req,res) => { 
     res.sendFile(path.join(__dirname + "/client/build/index.html")) 
