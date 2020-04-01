@@ -23,7 +23,8 @@ class App extends React.Component {
     return (
       
         <BrowserRouter>
-     
+      <Link to="/">Home</Link>
+      <Link to="/auth">Auth</Link>
         <Route path="/" exact component={Home}/>
         <Route path="/auth/" component={Lambda}/>
         </BrowserRouter>
