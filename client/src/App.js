@@ -12,7 +12,7 @@ class App extends React.Component {
   
   
   requestProfile = () => {
-    var oauthUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81gad30pe28yok&redirect_uri=https://master.dfhwi69jafa7m.amplifyapp.com/auth&state=0.06018782529263844&scope=r_liteprofile%20r_emailaddress%20w_member_social`
+    var oauthUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81gad30pe28yok&redirect_uri=https://ravilinkedinshare.herokuapp.com/auth&state=0.06018782529263844&scope=r_liteprofile%20r_emailaddress%20w_member_social`
     
       window.location.href=`${oauthUrl}`
     
@@ -23,8 +23,7 @@ class App extends React.Component {
     return (
       
         <BrowserRouter>
-      <Link to="/">Home</Link>
-      <Link to="/auth">Auth</Link>
+     
         <Route path="/" exact component={Home}/>
         <Route path="/auth/" component={Lambda}/>
         </BrowserRouter>
