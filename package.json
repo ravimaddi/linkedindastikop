@@ -5,14 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "install": "cd client && npm run build",
-    "heroku-prebuild": "npm install",
-    "heroku-postbuild": "cd client && npm install && npm run build"
-}, 
-"engines": {
-    "node": "^10.3.0", 
-    "npm": "^6.8.0" 
-},
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "concurrently \"nodemon index.js\" \"cd client && npm start\""
+  },
+  "engines": {
+    "node": "^10.3.0",
+    "npm": "^6.8.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ravimaddi/linkedInFront.git"
