@@ -33,7 +33,7 @@ class Lambda extends React.Component{
       }  
       handleAxios=()=>{
           this.setState({showButton:false})
-        axios.get('https://zhpt499mlb.execute-api.us-east-1.amazonaws.com/dev/api/info')
+        axios.get('https://zhpt499mlb.execute-api.us-east-1.amazonaws.com/dev/')
         .then((response)=>{
             console.log(response)
           if(response.data){
