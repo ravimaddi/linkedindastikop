@@ -3,7 +3,7 @@ import photo from "./Sign-In-Large---Hover.png";
 
 class Home extends Component {
   handleLinkedInLogin = () => {
-    const oauthUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81gad30pe28yok&redirect_uri=https://ravilinkedinshare.herokuapp.com/auth&state=0.06018782529263844&scope=r_liteprofile%20r_emailaddress%20w_member_social`;
+    const oauthUrl = `https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=81gad30pe28yok&redirect_uri=https://master.d2ei6byri74h0s.amplifyapp.com/auth&state=0.06018782529263844&scope=r_liteprofile%20r_emailaddress%20w_member_social`;
 
     window.location.href = `${oauthUrl}`;
   };

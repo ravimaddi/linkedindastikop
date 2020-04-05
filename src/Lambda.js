@@ -17,7 +17,7 @@ class Lambda extends React.Component {
     console.log(params.code);
     axios
       .post(
-        `https://j8jgfalh3h.execute-api.us-east-1.amazonaws.com/dev/api?code=${params.code}`,
+        `https://t9u76s2fif.execute-api.ap-south-1.amazonaws.com/dev/api?code=${params.code}`,
         ""
       )
       .then((response) => {
@@ -38,7 +38,7 @@ class Lambda extends React.Component {
   handleYoutube = () => {
     this.setState({ showLinikedInButton: false });
     axios
-      .get("https://j8jgfalh3h.execute-api.us-east-1.amazonaws.com/dev/")
+      .get("https://t9u76s2fif.execute-api.ap-south-1.amazonaws.com/dev/")
 
       .catch((error) => {
         console.log(error);
@@ -51,7 +51,7 @@ class Lambda extends React.Component {
     this.setState({ showBlogButton: false });
     axios
       .get(
-        "https://j8jgfalh3h.execute-api.us-east-1.amazonaws.com/dev/api/blog"
+        "https://t9u76s2fif.execute-api.ap-south-1.amazonaws.com/dev/api/blog"
       )
       .then((response) => {
         console.log(response);
