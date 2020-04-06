@@ -8,6 +8,11 @@ class Home extends Component {
     window.location.href = `${oauthUrl}`;
   };
 
+  handleTwitterLogin = () => {
+    const oauthUrl = ``;
+    window.location.href = `${oauthUrl}`;
+  };
+
   render() {
     return (
       <div style={{ textAlign: "center" }}>
@@ -17,6 +22,9 @@ class Home extends Component {
           onClick={this.handleLinkedInLogin}
           alt={"Click to LinKedInLogin"}
         />
+        <br />
+        <br />
+        <button onClick={this.handleTwitterLogin}>Twitter Login</button>
       </div>
     );
   }
