@@ -23,9 +23,11 @@ class Home extends Component {
           onClick={this.handleLinkedInLogin}
           alt={"Click to LinKedInLogin"}
         />
+        {/* <br />
         <br />
         <br />
         <Twitter/>
+        <button onClick={this.handleTwitterLogin}>Twitter Login</button> */}
       </div>
     );
   }
