@@ -9,14 +9,11 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div style={{ textAlign: "center" }}>
-          {/* <Link to="/">Home</Link> */}
+          <Link to="/">Home</Link>
         </div>
         <Route path="/" exact component={Home} />
         <Route path="/auth" component={Lambda} />
         <Route path="/twitter/auth" component={Twitter} />
-        
-
-        {/* <Route path="/twitter/auth" component={Twitter} /> */}
       </BrowserRouter>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import photo from "./Sign-In-Large---Hover.png";
-import Twitter from "./Twitter";
+import linkedinInImage from "./Sign-In-Small---Active.png";
+import twitterImage from "./twitterLogin.png";
 
 class Home extends Component {
   handleLinkedInLogin = () => {
@@ -10,7 +10,7 @@ class Home extends Component {
   };
 
   handleTwitterLogin = () => {
-    const oauthUrl = ``;
+    const oauthUrl = `'https://1pzebv2jdl.execute-api.ap-south-1.amazonaws.com/dev/twitter/login'`;
     window.location.href = `${oauthUrl}`;
   };
 
@@ -19,15 +19,17 @@ class Home extends Component {
       <div style={{ textAlign: "center" }}>
         <h1>Click on the Image to SignIn</h1>
         <img
-          src={photo}
+          src={linkedinInImage}
           onClick={this.handleLinkedInLogin}
           alt={"Click to LinKedInLogin"}
         />
-        {/* <br />
         <br />
         <br />
-        <Twitter/>
-        <button onClick={this.handleTwitterLogin}>Twitter Login</button> */}
+        <img
+          src={twitterImage}
+          onClick={this.handleTwitterLogin}
+          alt={"Click to login with twitter"}
+        />
       </div>
     );
   }

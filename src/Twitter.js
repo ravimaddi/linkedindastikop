@@ -1,25 +1,83 @@
-import React,{useState,useEffect} from "react";
+import React from "react";
 import axios from "axios";
-import photo from "./twitterLogin.png";
 
-export default function Twitter() {
-  const handleClick=()=>{
-    window.location.href ='https://3xf4trcnyk.execute-api.us-east-1.amazonaws.com/dev/twitter/login'
-    // axios.get('https://3xf4trcnyk.execute-api.us-east-1.amazonaws.com/dev/twitter/callback')
-    //   .then(data=>{
-    //     console.log(data)
-    //   })
-    //   .catch(err=>alert(err))
+class Lambda extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      info: "Twitter Login Suucesfull",
+      showYouTubeBtn: true,
+      showBlogPostBTn: true,
+    };
   }
-  return (
-    <div>
-        <img 
-          src={photo}
-          onClick={handleClick}
-          alt={"Click to login with twitter"}
-        />
-    </div>
-  )
+  handleBlog = () => {
+    this.setState({ showBlogPostBTn: false });
+    axios
+      .get(
+        "https://1pzebv2jdl.execute-api.ap-south-1.amazonaws.com/dev/twitter/blog"
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          info: "Your Blog is posted Succesfully to Twitter",
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          info: "Your Blog is posted Succesfully to Twitter",
+        });
+        console.log(error);
+      });
+  };
+  handleYoutube = () => {
+    this.setState({ showBlogPostBTn: false });
+    axios
+      .get(
+        "https://1pzebv2jdl.execute-api.ap-south-1.amazonaws.com/dev/twitter/video"
+      )
+      .then((response) => {
+        console.log(response);
+        this.setState({
+          info: "Your Youtube video is posted Succesfully to Twitter",
+        });
+      })
+      .catch((error) => {
+        this.setState({
+          info: "Your Youtube video is posted Succesfully to Twitter",
+        });
+        console.log(error);
+      });
+  };
+  render() {
+    const btn = {
+      backgroundColor: "#4CAF50" /* Green */,
+      border: "none",
+      color: "white",
+      padding: "15px 32px",
+      textAlign: "center",
+      textDecoration: "none",
+      display: "inline-block",
+      fontSize: "16px",
+    };
+    return (
+      <div style={{ textAlign: "center" }}>
+        <h1>{this.state.info}</h1>
+        {this.state.showYouTubeBtn ? (
+          <button style={btn} onclick={this.handleYoutube}>
+            Post Youtube Video to Twitter
+          </button>
+        ) : null}
+        <br />
+        <br />
+        {this.state.showBlogPostBTn ? (
+          <button style={btn} onclick={this.handleBlog}>
+            {" "}
+            Post Blogs to Twitter
+          </button>
+        ) : null}
+      </div>
+    );
+  }
 }
 
-
+export default Lambda;
