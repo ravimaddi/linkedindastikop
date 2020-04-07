@@ -23,7 +23,7 @@ class Lambda extends React.Component {
       .then((response) => {
         if (response.data) {
           this.setState({
-            info: "Your Login is Succesful,You can close this page",
+            info: "Your LinkedIn Login is Successful",
             showLinikedInButton: true,
             showBlogButton: true,
           });
@@ -43,7 +43,7 @@ class Lambda extends React.Component {
       .catch((error) => {
         console.log(error);
         this.setState({
-          info: "Your Youtube video is posted Succesfully",
+          info: "Your Youtube video is posted Successfully",
         });
       });
   };
@@ -56,12 +56,12 @@ class Lambda extends React.Component {
       .then((response) => {
         console.log(response);
         this.setState({
-          info: "Your Blog is posted Succesfully to LinkeIn",
+          info: "Your Blog is posted Successfully to LinkeIn",
         });
       })
       .catch((error) => {
         this.setState({
-          info: "Your Blog is posted Succesfully to LinkeIn",
+          info: "Your Blog is posted Successfully to LinkeIn",
         });
         console.log(error);
       });

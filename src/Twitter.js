@@ -5,7 +5,7 @@ class Lambda extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      info: "Twitter Login Suucesfull",
+      info: "Twitter Login Successful",
       showYouTubeBtn: true,
       showBlogPostBTn: true,
     };
@@ -19,12 +19,12 @@ class Lambda extends React.Component {
       .then((response) => {
         console.log(response);
         this.setState({
-          info: "Your Blog is posted Succesfully to Twitter",
+          info: "Your Blog is posted Successfully to Twitter",
         });
       })
       .catch((error) => {
         this.setState({
-          info: "Your Blog is posted Succesfully to Twitter",
+          info: "Your Blog is posted Successfully to Twitter",
         });
         console.log(error);
       });
@@ -38,12 +38,12 @@ class Lambda extends React.Component {
       .then((response) => {
         console.log(response);
         this.setState({
-          info: "Your Youtube video is posted Succesfully to Twitter",
+          info: "Your Youtube video is posted Successfully to Twitter",
         });
       })
       .catch((error) => {
         this.setState({
-          info: "Your Youtube video is posted Succesfully to Twitter",
+          info: "Your Youtube video is posted Successfully to Twitter",
         });
         console.log(error);
       });
