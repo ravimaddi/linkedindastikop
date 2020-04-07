@@ -10,7 +10,7 @@ class Home extends Component {
   };
 
   handleTwitterLogin = () => {
-    const oauthUrl = `'https://1pzebv2jdl.execute-api.ap-south-1.amazonaws.com/dev/twitter/login'`;
+    const oauthUrl = `https://1pzebv2jdl.execute-api.ap-south-1.amazonaws.com/dev/twitter/login`;
     window.location.href = `${oauthUrl}`;
   };
 

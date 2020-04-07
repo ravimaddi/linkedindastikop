@@ -30,7 +30,7 @@ class Lambda extends React.Component {
       });
   };
   handleYoutube = () => {
-    this.setState({ showBlogPostBTn: false });
+    this.setState({ showYouTubeBtn: false });
     axios
       .get(
         "https://1pzebv2jdl.execute-api.ap-south-1.amazonaws.com/dev/twitter/video"
@@ -63,15 +63,14 @@ class Lambda extends React.Component {
       <div style={{ textAlign: "center" }}>
         <h1>{this.state.info}</h1>
         {this.state.showYouTubeBtn ? (
-          <button style={btn} onclick={this.handleYoutube}>
+          <button style={btn} onClick={this.handleYoutube}>
             Post Youtube Video to Twitter
           </button>
         ) : null}
         <br />
         <br />
         {this.state.showBlogPostBTn ? (
-          <button style={btn} onclick={this.handleBlog}>
-            {" "}
+          <button style={btn} onClick={this.handleBlog}>
             Post Blogs to Twitter
           </button>
         ) : null}
