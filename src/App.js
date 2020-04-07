@@ -14,6 +14,8 @@ class App extends React.Component {
         <Route path="/" exact component={Home} />
         <Route path="/auth" component={Lambda} />
         <Route path="/twitter/auth" component={Twitter} />
+        
+
       </BrowserRouter>
     );
   }
