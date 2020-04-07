@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import photo from "./Sign-In-Large---Hover.png";
+import Twitter from "./Twitter";
 
 class Home extends Component {
   handleLinkedInLogin = () => {
@@ -24,6 +25,8 @@ class Home extends Component {
         />
         {/* <br />
         <br />
+        <br />
+        <Twitter/>
         <button onClick={this.handleTwitterLogin}>Twitter Login</button> */}
       </div>
     );
